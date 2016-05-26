@@ -1,0 +1,29 @@
+ul li {
+	display:inline;
+}
+ul li input + label{
+	float:left;
+	width: 125;
+	padding: 3px;
+}
+
+ul li input{
+	display: none;
+}
+
+ul li input + label{
+	color: blue;
+	background-color:gray;
+	border:1px solid silver;
+}
+
+ul li input:checked + label{
+	color: black;
+	background-color:green;
+	border:1px solid silver;
+}
+
+
+article {
+	overflow:auto;
+}

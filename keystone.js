@@ -43,7 +43,7 @@ keystone.set('locals', {
 });
 
 // Load your project's Routes
-
+keystone.set('cors allow origin', true);
 
 keystone.set('routes', require('./routes'));
 
