@@ -1,0 +1,67 @@
+html.
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Video Blender</title>
+		<script type="text/javascript" src="http://www.kaizou.org/code/3rdparty/jsmanipulate/jsmanipulate.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<section>
+		<video id="mVideo" width="600" height="450" style="z-index:100;" controls>
+		  <source src="https://lh3.googleusercontent.com/Th3jCGsj8zzuyW5tgH-le_6mK8yjH5hPuADlX07eJq1AiQOSVr6sSKZYE4sAHmR7X42Ol6qNeg=m22?cpn=Z3E2SvmirLHC2-Ry&amp;c=WEB&amp;cver=1.20160525" type="video/mp4">
+		  Your browser does not support the video tag.
+		</video>
+			
+		<canvas id="myCanvas" width="600" height="338" style="border:1px solid #000000;"></canvas>
+
+		<canvas id="backCanvas" width="600" height="450" style="border:1px solid #000000; position:absolute; top:6px; left:6px; z-index:-1;"></canvas>
+
+		<script>
+
+
+
+		window.onload = function() {
+		    var c=document.getElementById("myCanvas");
+		    var ctx=c.getContext("2d");
+
+		    var video=document.getElementById("mVideo");
+
+		    var backCanvas = document.getElementById("backCanvas");
+			
+
+			var backctx=backCanvas.getContext("2d");
+			document.body.appendChild(backCanvas);
+
+			var count=0;
+			var timeCallback = function(){
+				// if (this.video.paused||this.video.ended) {
+				// 	return;
+				// }
+				ctx.drawImage(video,0,0,video.videoWidth,video.videoHeight,0,0,c.width,c.height);
+				var data=c.getContext("2d").getImageData(0,0,c.width,c.height);
+				setTimeout(function(){
+					timeCallback();
+				},20);
+			}
+			
+			timeCallback();
+		    //ctx.drawImage(,0,0);
+		};
+		
+		</script>
+
+		</section>
+
+		<aside>
+			<h2>About this app</h2>
+			<p>This app is created for apply the blender using canvas and some other JS technique</p>
+		</aside>
+
+		<footer>
+			<p>Copyright 2016 Peter Nguyen</p>
+		</footer>
+
+	</body>
+	
