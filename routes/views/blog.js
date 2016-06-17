@@ -11,6 +11,7 @@ exports = module.exports = function (req, res) {
 
 	locals.data = {
 		posts: [],
+		nextpage: Number(req.query.page || 1)+1,
 	};
 
 

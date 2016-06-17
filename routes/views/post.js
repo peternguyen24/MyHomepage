@@ -12,6 +12,7 @@ exports = module.exports = function (req, res) {
 	};
 	locals.data = {
 		posts: [],
+		post : null,
 	};
 
 	// Load the current post
