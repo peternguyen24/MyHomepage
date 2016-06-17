@@ -25,3 +25,12 @@ body {
 footer {
     margin: 50px 0;
 }
+
+.text-white {
+	color: white;
+}
+
+.sub-page-icon {
+	width: 200;
+	height: 200;
+}
