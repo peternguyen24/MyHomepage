@@ -4,12 +4,38 @@ block css
 	link(href="/styles/root.css", rel="stylesheet")
 
 block content
-	//content
+	//main content
 	.container
+	<!-- Page Content -->
+	.container
+		<!-- Introduction Row -->
 		.row
-			.container
-				.col-xs-3
-					img(class="img-circle img-center" src="http://i.imgur.com/zQExT97.jpg")
-				.col-xs-7
-					h1 Peter Nguyen
+			.col-lg-12
+				h1.page-header Peter Nguyen Website
+				| Welcome to my website. Feel free to clink links below to discover more about the webiste.
+		<!-- Table of content -->
+		.row
+			div.col-lg-12		
+				h2.page-header All of possible links
+			
+				div.col-lg-4.col-sm-6.text-center
+					a(href="/blog")
+						img.img-circle.img-responsive.img-center(src="http://placehold.it/200x200"  alt="")
+					h2  Blog
+						small  Peter Nguyen Blog
+					p This is where I write about everything: From self-related events, hobbies to my thoughts and opinions as a Computer Science student and Software Engineer. 
+			
+				div.col-lg-4.col-sm-6.text-center
+					a(href="/app/index.html")
+						img.img-circle.img-responsive.img-center(src="http://placehold.it/200x200"  alt="")
+					h2  Application
+						small  Self writing apps
+					p This is where I post demo/deployment of some application/service I wrote in spare time. It can be very interesting or useful, but some of them could be completely nonsense.
+				div.col-lg-4.col-sm-6.text-center
+					a(href="/~hoangnt")
+						img.img-circle.img-responsive.img-center(src="http://placehold.it/200x200"  alt="")
+					h2  My Homepage
+						small  Academic and professional CV
+					p This is my official homepage for academic and working career. All of my project, paper, working experience, resume will be listed here.
+
 
