@@ -1,0 +1,50 @@
+extends ../layouts/default
+
+block css
+	link(href="/styles/app/apphome.css", rel="stylesheet")
+
+
+block content
+	nav.navbar.navbar-inverse.navbar-fixed-top
+		div.container-fluid
+			div.navbar-header
+				a.navbar-brand(href="#") Peter Nguyen Apps
+			div.nav.navbar-nav.navbar-right
+				li.page-scroll
+					a(href="/") Homepage
+				li.page-scroll
+					a(href="/") About
+				li.page-scroll
+					a(href="/") Contact
+	<!-- Page Content -->
+	.container
+		<!-- Introduction Row -->
+		.row
+			.col-lg-12
+				h1.text-center Peter Nguyen Application
+		<!-- Table of content -->
+		.row
+			div.col-lg-12		
+				h2.page-header All possible app deployment/demo
+				div.col-lg-4.col-sm-6.text-center
+					a(href="/app/videoblender")
+						img.img-circle.img-responsive.img-center.hovereffect(src="http://i.imgur.com/4kNtYXz.png"  alt="" height="200" width="200")
+					h2  
+						a(href="/app/videoblender")	Video Blender
+						small  Video realtime-blending effect
+					p This application is a demo of project in javascript. A video will be played in this application, and the realtime-effect processor will process the image frame to produce another video with multiple effects (can be chosen) applied. Feel free to give comment and feedback at peternguyen24.dev@gmail.com
+				div.col-lg-4.col-sm-6.text-center
+					a(href="/app/index.html")
+						img.img-circle.img-responsive.img-center.hovereffect(src="http://i.imgur.com/AfYeysP.png"  alt="" height="200" width="200")
+					h2  
+						a(href="/blog") Application
+						small  Self writing apps
+					p Where I post demo/deployment of some application/service I wrote in spare time. It can be very interesting or useful, but some of them could be completely nonsense.
+
+
+
+			
+
+				
+
+

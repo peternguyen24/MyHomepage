@@ -30,7 +30,15 @@ footer {
 	color: white;
 }
 
-.sub-page-icon {
-	width: 200;
-	height: 200;
+.hovereffect {
+display:block;
+position:relative;
+-webkit-transition:all .4s linear;
+transition:all .4s linear;
+}
+
+.hovereffect:hover {
+    -ms-transform:scale(1.2);
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
 }

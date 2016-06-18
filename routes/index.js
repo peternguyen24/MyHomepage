@@ -35,10 +35,21 @@ var routes = {
 exports = module.exports = function (app) {
 	// Views
 	app.get('/', routes.views.index);
+
+	//for homepage and academic/profession things
+
+	//for blog routes
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
 	app.all('/contact', routes.views.contact);
+
+
+
+	//for application routes
+	app.get('/app/index.html',routes.views.apphome);
 	app.get('/app/videoblender', routes.views.videoblender);
+
+
 
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
